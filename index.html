@@ -8,10 +8,11 @@
   <title>MyFirstSite</title>
   <link rel="shortcut icon" href="./icons/icons8-idea.svg" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="calendar.css">
 </head>
 
-<body>
-  <div class="container">
+<body class="light">
+  
     
     <div class="bottommenu">
       <div class="calculator_icon"></div>
@@ -24,7 +25,6 @@
 
     <div class="calcwrapper" id="drag">
       <div class="closebtn">&#215</div>
-      <div class="movecalc">&#43</div>
       <div class="calculator">
         <div class="input">
           <input type="text" id="calcinput" readonly>
@@ -52,9 +52,65 @@
       </div>
     </div>
 
-  </div>
+    <div class="calenwrapper" id="drag2">
+      <div class="closecalenbtn">&#215</div>
+      <div class="calendar">
+        <div class="calendar-header">
+          <span class="month-picker" id="month-picker">
+            February
+          </span>
+          <div class="year-picker">
+            <span class="year-change" id="prev-year">
+              <pre><</pre>
+            </span>
+            <span id="year">2021</span>
+            <span class="year-change" id="next-year">
+              <pre>></pre>
+            </span>
+          </div>
+        </div>
+        <div class="calendar-body">
+          <div class="calendar-week-day">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="calendar-days">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+          </div>
+        </div>
+        <div class="calendar-footer">
+          <div class="toggle">
+            <span>Dark Mode</span>
+            <div class="dark-mode-switch">
+              <div class="dark-mode-switch-ident"></div>
+            </div>
+          </div>
+        </div>
+        <div class="month-list"></div>
+      </div>
+    </div>
+  
 
-  <script src="main.js"></script>
+  <script src="calculator.js"></script>
+  <script src="calendar.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -64,6 +120,9 @@
     $(function () {
 
       $('#drag').draggable({
+        containment: "parent"
+      });
+      $('#drag2').draggable({
         containment: "parent"
       })
 

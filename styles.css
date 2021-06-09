@@ -1,11 +1,51 @@
-html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
+:root {
+  --dark-body: #4d4c5a;
+  --dark-main: #141529;
+  --dark-second: #79788c;
+  --dark-hover: #323048;
+  --dark-text: #f8fbff;
 
-.container {
-  background-image: url(./main.jpg);
-  width: 100%;
+  --light-body: #f3f8fe;
+  --light-main: #fdfdfd;
+  --light-second: #c3c2c8;
+  --light-hover: #edf0f5;
+  --light-text: #151426;
+
+  --blue: #0000ff;
+  --white: #fff;
+
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  --font-family: cursive;
+}
+
+.dark {
+  --bg-body: var(--dark-body);
+  --bg-main: var(--dark-main);
+  --bg-second: var(--dark-second);
+  --color-hover: var(--dark-hover);
+  --color-txt: var(--dark-text);
+}
+
+.light {
+  --bg-body: var(--light-body);
+  --bg-main: var(--light-main);
+  --bg-second: var(--light-second);
+  --color-hover: var(--light-hover);
+  --color-txt: var(--light-text);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
   height: 100vh;
-  background-position: center;
-  background-size: cover;
+  font-family: var(--font-family);
+  background-color: var(--bg-body);
 }
 
 .bottommenu {
@@ -52,8 +92,11 @@ html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
   visibility: hidden;
   display: inline-block;
   border-radius: 5px;
-  position: relative;
+  position: absolute;
   background-color: rgb(255, 255, 255);
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .calculator {
@@ -69,6 +112,7 @@ html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   padding: 5px;
+  box-shadow: var(--shadow);
 }
 
 .closebtn {
@@ -76,25 +120,13 @@ html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
   align-items: center;
   justify-content: center;
   font-size: x-large;
-  width: 25px;
-  height: 15px;
-  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   background-color: rgb(255, 0, 51);
   cursor: pointer;
   position: absolute;
   right: 0;
-}
-
-.movecalc {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: x-large;
-  width: 25px;
-  height: 15px;
-  border-radius: 5px;
-  background-color: rgb(255, 0, 51);
-  cursor: pointer;
 }
 
 .item {
@@ -125,3 +157,4 @@ html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
 }
 
 .equalbtn {background-color: rgb(245, 140, 140);}
+
