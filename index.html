@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFirstSite</title>
+  <link rel="shortcut icon" href="./icons/icons8-idea.svg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="bottommenu">
+      <div class="calculator_icon"></div>
+      <div class="calendar_icon"></div>
+      <div class="item2"></div>
+      <div class="item3"></div>
+      <div class="item4"></div>
+      <div class="item5"></div>
+    </div>
+
+    <div class="calculator">
+      <div class="closebtn">&#215</div>
+      <div class="item input">
+        <input type="text" id="calcinput" readonly>
+      </div>
+      <div class="item" id="cleanbtn">C</div>
+      <div class="item backbtn">&#8592</div>
+      <div class="item" id="brackets" onclick="closeBracket(')')">( )</div>
+      <div class="item" onclick="addCharecter('/')">/</div>
+      <div class="item" onclick="addCharecter('7')">7</div>
+      <div class="item" onclick="addCharecter('8')">8</div>
+      <div class="item" onclick="addCharecter('9')">9</div>
+      <div class="item" onclick="addCharecter('*')">*</div>
+      <div class="item" onclick="addCharecter('4')">4</div>
+      <div class="item" onclick="addCharecter('5')">5</div>
+      <div class="item" onclick="addCharecter('6')">6</div>
+      <div class="item" onclick="addCharecter('-')">-</div>
+      <div class="item" onclick="addCharecter('1')">1</div>
+      <div class="item" onclick="addCharecter('2')">2</div>
+      <div class="item" onclick="addCharecter('3')">3</div>
+      <div class="item" onclick="addCharecter('+')">+</div>
+      <div class="item sqrtbtn">&#8730</div>
+      <div class="item" onclick="addCharecter('0')">0</div>
+      <div class="item" onclick="addCharecter('.')">.</div>
+      <div class="item equalbtn">=</div>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(function () {
+
+      $('#drag').draggable({
+        containment: "parent"
+      })
+
+    });
+  </script>
+</body>
+
+</html>

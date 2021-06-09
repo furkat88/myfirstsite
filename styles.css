@@ -1,0 +1,115 @@
+html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
+
+.container {
+  background-image: url(./main.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.bottommenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 90%;
+}
+
+.calculator_icon {
+  background-image: url(./icons/icons8-calculator.svg);
+  background-position: center;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: transform 0.5s;
+}
+
+.calculator_icon:hover {
+  transform: translateY(-10px);
+}
+
+.calendar_icon {
+  background-image: url(./icons/icons8-calendar.svg);
+  background-position: center;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.calendar_icon:hover {
+  transform: translateY(-10px);
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  justify-items: stretch;
+  align-items: stretch;
+  width: 350px;
+  height: 500px;
+  border: 5px black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 5px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.closebtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  width: 25px;
+  height: 15px;
+  border-radius: 5px;
+  background-color: rgb(255, 0, 51);
+  position: absolute;
+  top: -20px;
+  left: 335px;
+  cursor: pointer;
+}
+
+.item {
+  background-color: rgb(58, 206, 255);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  grid-column: 1/-1;
+  padding: 0;
+}
+#calcinput {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: xx-large;
+}
+
+.equalbtn {background-color: rgb(245, 140, 140);}
