@@ -33,17 +33,13 @@ function closeBracket(bracket) {
   if (calcInput.value.includes('(')) return calcInput.value += bracket;
 }
 
-let calculator = document.querySelector('.calculator')
+let calculator = document.querySelector('.calcwrapper')
 let closeCalc = document.querySelector('.closebtn')
 let calcIcon = document.querySelector('.calculator_icon')
 
 closeCalc.addEventListener('click', () => {
   calculator.style.visibility = "hidden"
-  calculator.style.opacity = "0"
-  calculator.style.transition = "0.5s"
 })
 calcIcon.addEventListener('click', () => {
   calculator.style.visibility = "visible"
-  calculator.style.opacity = "1"
-  calculator.style.transition = "0.5s"
 })

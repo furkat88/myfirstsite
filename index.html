@@ -22,31 +22,34 @@
       <div class="item5"></div>
     </div>
 
-    <div class="calculator">
+    <div class="calcwrapper" id="drag">
       <div class="closebtn">&#215</div>
-      <div class="item input">
-        <input type="text" id="calcinput" readonly>
+      <div class="movecalc">&#43</div>
+      <div class="calculator">
+        <div class="input">
+          <input type="text" id="calcinput" readonly>
+        </div>
+        <div class="item" id="cleanbtn">C</div>
+        <div class="item backbtn">&#8592</div>
+        <div class="item" id="brackets" onclick="closeBracket(')')">( )</div>
+        <div class="item" onclick="addCharecter('/')">/</div>
+        <div class="item" onclick="addCharecter('7')">7</div>
+        <div class="item" onclick="addCharecter('8')">8</div>
+        <div class="item" onclick="addCharecter('9')">9</div>
+        <div class="item" onclick="addCharecter('*')">*</div>
+        <div class="item" onclick="addCharecter('4')">4</div>
+        <div class="item" onclick="addCharecter('5')">5</div>
+        <div class="item" onclick="addCharecter('6')">6</div>
+        <div class="item" onclick="addCharecter('-')">-</div>
+        <div class="item" onclick="addCharecter('1')">1</div>
+        <div class="item" onclick="addCharecter('2')">2</div>
+        <div class="item" onclick="addCharecter('3')">3</div>
+        <div class="item" onclick="addCharecter('+')">+</div>
+        <div class="item sqrtbtn">&#8730</div>
+        <div class="item" onclick="addCharecter('0')">0</div>
+        <div class="item" onclick="addCharecter('.')">.</div>
+        <div class="item equalbtn">=</div>
       </div>
-      <div class="item" id="cleanbtn">C</div>
-      <div class="item backbtn">&#8592</div>
-      <div class="item" id="brackets" onclick="closeBracket(')')">( )</div>
-      <div class="item" onclick="addCharecter('/')">/</div>
-      <div class="item" onclick="addCharecter('7')">7</div>
-      <div class="item" onclick="addCharecter('8')">8</div>
-      <div class="item" onclick="addCharecter('9')">9</div>
-      <div class="item" onclick="addCharecter('*')">*</div>
-      <div class="item" onclick="addCharecter('4')">4</div>
-      <div class="item" onclick="addCharecter('5')">5</div>
-      <div class="item" onclick="addCharecter('6')">6</div>
-      <div class="item" onclick="addCharecter('-')">-</div>
-      <div class="item" onclick="addCharecter('1')">1</div>
-      <div class="item" onclick="addCharecter('2')">2</div>
-      <div class="item" onclick="addCharecter('3')">3</div>
-      <div class="item" onclick="addCharecter('+')">+</div>
-      <div class="item sqrtbtn">&#8730</div>
-      <div class="item" onclick="addCharecter('0')">0</div>
-      <div class="item" onclick="addCharecter('.')">.</div>
-      <div class="item equalbtn">=</div>
     </div>
 
   </div>

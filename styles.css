@@ -48,6 +48,14 @@ html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
   transform: translateY(-10px);
 }
 
+.calcwrapper {
+  visibility: hidden;
+  display: inline-block;
+  border-radius: 5px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+
 .calculator {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -58,15 +66,9 @@ html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
   width: 350px;
   height: 500px;
   border: 5px black;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   padding: 5px;
-  visibility: hidden;
-  opacity: 0;
 }
 
 .closebtn {
@@ -78,9 +80,20 @@ html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
   height: 15px;
   border-radius: 5px;
   background-color: rgb(255, 0, 51);
+  cursor: pointer;
   position: absolute;
-  top: -20px;
-  left: 335px;
+  right: 0;
+}
+
+.movecalc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  width: 25px;
+  height: 15px;
+  border-radius: 5px;
+  background-color: rgb(255, 0, 51);
   cursor: pointer;
 }
 
@@ -98,7 +111,6 @@ html, body {margin: 0; padding: 0; box-sizing: border-box; user-select: none;}
 }
 
 .input {
-  width: 100%;
   grid-column: 1/-1;
   padding: 0;
 }
